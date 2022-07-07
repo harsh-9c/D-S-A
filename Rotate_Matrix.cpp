@@ -19,3 +19,7 @@
         }
         
     }
+
+// for 90-degree    --->  Transpose then swap columns
+// for 180-degree   --->  swap columns then swap rows
+// for 270-degree   --->  Transpose then swap rows
