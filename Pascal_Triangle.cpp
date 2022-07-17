@@ -1,3 +1,21 @@
+/*
+
+* 3 Types of questions from pascal traingle 
+
+1. Print the pascal triangle for n rows
+2. Print the nth row of pascal triangle
+3. Print the number at nth row and mth col
+
+
+                                                    n-1
+ * Formula to compute no at n th row and mth col ->    C
+                                                         r-1
+                                                         
+
+*/
+
+
+
 vector<vector<int>> generate(int numRows) {
         
         vector<vector<int>>v;
