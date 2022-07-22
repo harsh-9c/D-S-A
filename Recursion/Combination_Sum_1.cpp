@@ -2,7 +2,6 @@
         
         if(idx>=a.size()){
             if(target==0) ans.push_back(v);
-            v.clear();
             return;    
         }
         
