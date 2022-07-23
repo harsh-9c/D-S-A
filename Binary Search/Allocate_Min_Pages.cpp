@@ -31,6 +31,6 @@ long long ayushGivesNinjatest(int n, int m, vector<int> time){
         
     }
     
-    return ans;
+    return low;
     
 }
