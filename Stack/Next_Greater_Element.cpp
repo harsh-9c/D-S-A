@@ -29,7 +29,7 @@ vector<int> nextGreaterElement(vector<int>& findNums, vector<int>& nums) {
             if(s.empty()) s.push(nums2[i]),m[nums2[i]]=-1;     
             else if(s.top()>nums2[i]) m[nums2[i]]=s.top(),s.push(nums2[i]);
             else{
-                while(s.size() && s.top()<nums2[i]) s.pop();
+                while(s.size() && s.top()<nums2[i]) s.pop();   
                 if(s.empty()) s.push(nums2[i]),m[nums2[i]]=-1;
                 else m[nums2[i]]=s.top(),s.push(nums2[i]);
             }    
