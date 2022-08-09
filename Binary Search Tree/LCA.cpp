@@ -1,19 +1,14 @@
-TreeNode* solve(TreeNode* root,TreeNode* p,TreeNode* q){
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         
-        if(!root || root==p || root== q) return root;
+        if(!root) return NULL;
         
+        int cur=root->val;
         
-        auto l=solve(root->left,p,q);
-        auto r=solve(root->right,p,q);
+        if(cur>p->val && cur>q->val) return lowestCommonAncestor(root->left,p,q);
+        if(cur<q->val && cur<p->val) return lowestCommonAncestor(root->right,p,q);
         
-        if(l && r) return root;
-        
-        if(!l) return r;
-        else return l;
-        
+        return root;
+      
     }
-    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        
-        return solve(root,p,q);
-        
-    }
+
+
