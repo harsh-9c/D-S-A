@@ -1,5 +1,5 @@
-// 1. Take care of poping from queue
-
+// 1. Take care of poping from queue.
+// 2. We not required visited array in dijkstra's algo because if node was already visited then during revisit the weight gets increase so we will not put in queue.
 
 vector <int> dijkstra(int nodes, vector<vector<int>> graph[], int source){
         
