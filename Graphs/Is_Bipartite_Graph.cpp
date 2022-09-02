@@ -72,7 +72,7 @@ bool bipartite(int num,vector<int>&visited,vector<int>v[]){
                 if(!bipartite(i,visited,v)) return false;
             }
         }
-       for(auto x:visited) cout<<x<<" ";
+
        return true; 
         
     }
