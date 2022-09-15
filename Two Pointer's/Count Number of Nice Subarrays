@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int solve(vector<int>&nums,int k){
+        int start=0,end=0,ans=0,cnt=0;
+        map<int,int>m;
+        int n=nums.size();
+        
+        while(end<n){
+            if(nums[end]%2) cnt++;
+            m[nums[end]]++;
+            while(cnt>k && start<=end){
+                m[nums[start]]--;
+                if(nums[start]%2) cnt--;
+                if(m[nums[start]]==0) m.erase(nums[start]);        
+                start++;
+            }
+            if(cnt<=k) ans+=end-start;
+            
+            end++;
+            
+        }
+
+        return ans;
+
+    }
+    
+    int numberOfSubarrays(vector<int>& nums, int k) {
+        
+        return solve(nums,k)-solve(nums,k-1);
+        
+        
+    }
+};
